@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
-  "scripts": {
-    "start": "pm2 start ecosystem.config.cjs",
-    "stop": "pm2 stop telegram-bot",
-    "restart": "pm2 restart telegram-bot",
-    "logs": "pm2 logs telegram-bot",
-    "status": "pm2 status",
-    "dev": "node index.js"
-  },
+  "scripts":"scripts": {
+  "postinstall": "puppeteer install",
+  "start": "./start.sh",
+  "stop": "pm2 stop telegram-bot",
+  "restart": "pm2 restart telegram-bot",
+  "logs": "pm2 logs telegram-bot",
+  "status": "pm2 status",
+  "dev": "node index.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -22,4 +23,5 @@
     "puppeteer": "^24.8.2",
     "telegraf": "^4.15.0"
   }
+  
 }
